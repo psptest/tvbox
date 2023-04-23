@@ -1,0 +1,18 @@
+name: Schedule Worker
+on:
+  schedule:
+    - cron: '5 * * * *' #每日11点40,17点40，两个时间点执行任务
+jobs:
+  work:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: szenius/set-timezone@v1.0 # 设置执行环境的时区
+        with:
+          timezoneLinux: "Asia/Shanghai"
+      - uses: actions/setup-python@v4 # 使用python装配器
+        with:
+          python-version: '3.10' # 指定python版本
+          #cache: 'poetry' # 设置缓存
+
+      - run: run python .\zb.py # 执行
