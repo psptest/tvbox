@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 import requests,re,gzip,chardet,json,urllib,hashlib
-from pypinyin import pinyin, Style
+#from pypinyin import pinyin, Style
 
 def wfile(name,txt):
     w=open(name, "wb+")
