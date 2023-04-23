@@ -1,7 +1,7 @@
 name: Schedule Worker
 on:
   schedule:
-    - cron: '30 * * * *' #每日11点40,17点40，两个时间点执行任务
+    - cron: '5 * * * *' #每日11点40,17点40，两个时间点执行任务
 jobs:
   work:
     runs-on: ubuntu-latest
